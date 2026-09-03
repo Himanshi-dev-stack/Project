@@ -1,0 +1,211 @@
+ /* global elements */
+:root{
+    --primary-color: #FF9E20;
+    --secondary-color: #2c3e50;
+    --accent-color: #3498db;
+    --light-bg: #f8f9fa;
+    --dark-text: #333;
+    --light-text: #666;
+    --border-radius: 8px;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header Navbar */
+body{
+    font-family: arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+main > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0.5rem;
+    left: 1rem;
+}
+.checkout-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+}
+.checkout-container > div{
+    width: 50%;
+}
+/* left side of main section */
+.left{
+    padding: 1.8rem;
+}
+.title{
+    color: grey;
+}
+.contact{
+    padding: 0 3rem;
+}
+.left >h2, .payment >h2{
+    font-size: 1.2rem;
+}
+.contact, .payment{
+    margin-top: 1.2rem;
+}
+.payment-methods{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+}
+.pay-method{
+    height: 8%;
+    width: 22%;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+}
+.pay-method:hover{
+    border: 2px solid var(--primary-color);
+}
+.pay-method:nth-child(1){
+    border: 2px solid var(--primary-color);
+}
+.images > img{
+    height: 2.5rem;
+    object-fit: contain;
+}
+.pay-method > p{
+    color: grey;
+    font-size: 1.2rem;
+}
+.card{
+    margin-top: 1rem;
+    padding: 0 3rem;
+}
+.card-detail, .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+.card-detail > input, select, .contact >input{
+    border: none;
+    height: 2rem;
+    padding: 5px;
+}
+/* right side of main section */
+.cart-overview{
+    padding: 3rem 0;
+}
+.cart-overview > h1{
+    text-align: center;
+}
+.cart-overview > h3{
+    font-size: 1rem;
+    margin-left: 4rem;
+}
+.coupon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 4rem;
+}
+.coupon >input{
+    width: 40%;
+    height: 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+.coupon > .btn{
+    height: 2.5rem;
+    width: 8rem;
+    border: 1px solid rgb(23, 159, 212);
+    border-radius: var(--border-radius);
+    color: white;
+    background-color: rgb(23, 159, 212);
+}
+.btn:hover{
+    transform: translateY(-2px);
+}
+.btn:active{
+    background-color: transparent;
+    color: var(--secondary-color);  
+}
+.bill{
+    margin-top: 2.5rem;
+}
+.bill > div{
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    color: grey;
+    padding: 0 4rem;
+}
+.color{
+    color: var(--secondary-color);
+}
+.pay-btn{
+    height: 3rem;
+    width: 80%;
+    margin: 1rem 0 0 4rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+.pay-btn >a{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.certificates{
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.certificate > img{
+    height: 5.5rem;
+    width: 7rem;
+    object-fit: contain;
+}
+/* responsive for phone & table */
+@media (max-width:760px){
+    .btn{
+        width: 80%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .checkout-container{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+    .checkout-container>div{
+        padding: none;
+        width: 100%;
+    }
+    .pay-btn{
+        width: 65%;
+        align-self: center;
+    }
+    .bill{
+        justify-content: center;
+
+    }
+    .navbar{
+        flex-direction: column;
+        gap: 1rem;
+        background-color: white;
+    }
+    .nav-links{
+        gap: 1rem;
+    }
+}
