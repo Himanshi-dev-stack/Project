@@ -1,0 +1,22 @@
+.row{
+	display: block;
+	margin: 1% 0 1% 1%;
+}
+.col{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 1.3%;
+    text-align: justify;
+}
+.span-4-of-4, .span-3-of-4, .span-2-of-4, .span-1-of-4{
+	width: 23%;
+}
+.span-1-of-2{
+	width: 45%;
+}
+.span-1-of-3{
+	width: 31%;
+}
+.span-2-of-3{
+	width: 40%;
+}
